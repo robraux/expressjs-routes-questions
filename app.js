@@ -6,14 +6,14 @@ var error = require(__dirname + '/error.js');
 
 var app = express();
 
+var router = require(__dirname + '/router.js')(app);
+
 app.configure(function(){
   app.set('port', process.env.PORT || 9999);
   app.use(express.favicon());
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
-
-  require(__dirname + '/router.js')(app)
-
+  app.use(router);
   app.use(app.router);
   app.use(error); 
 

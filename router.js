@@ -1,15 +1,14 @@
 "use strict"
 
-var express = require('express')
+module.exports = function router(app) {
+  return function router(req, res, next) {
 
-module.exports = function (parent) {
-  var app = express()
+    app.get('/ping', function(req,res,next) {
+      return next(new Error('error going to middleware processor'))
+    })
+      
+    next()
 
-  parent.get('/ping', function(req,res,next) {
-    return next(new Error('error going to middleware processor'))
-  })
-    
-  parent.use(app)
-
+  }
 }
 
