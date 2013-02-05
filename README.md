@@ -6,7 +6,7 @@ Each call that uses the error route increases the nodejs stack size, never relea
 
 Note that the stack does _not_ grow if the error (4 args) handler is not utilized. 
 
-Why does this happen? Hopefull this branch will serve as an example for someone else to investigate or explain. 
+Why does this happen? Hopefully this branch will serve as an example for someone else to investigate or explain. 
 
 Which branch has what
 ====================
