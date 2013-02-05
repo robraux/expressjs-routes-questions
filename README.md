@@ -1,2 +1,5 @@
-master = goofy working
-correct = correct working
+Which branch has what
+====================
+
+* master : working version
+* goofy  : stack increasing on each request
