@@ -1,8 +1,3 @@
-
-/**
- * Module dependencies.
- */
-
 var express = require('express')
   , http = require('http')
   , path = require('path');
@@ -16,15 +11,11 @@ app.configure(function(){
   app.use(express.favicon());
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
+
   require(__dirname + '/router.js')(app)
 
-//sends the request to the right resource controller to build the response
-//    app.get('/ping', function(req,res,next) {
-//        return next(new Error('josh'))
-//    })
-
   app.use(app.router);
-  app.use(error); //error handler for "next(err)" calls in any of the prior middleware
+  app.use(error); 
 
 });
 
