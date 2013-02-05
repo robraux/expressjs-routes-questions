@@ -1,0 +1,9 @@
+node_modules/
+*.swp
+*.swo
+node_server_log
+logs
+logs/node_server.log
+test/lock
+lib-cov
+coverage.html
